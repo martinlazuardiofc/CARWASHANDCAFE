@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-deep: #081426;
+  --navy-dark: #0F2342;
+  --gold: #D4AF6A;
+  --cream: #F5E9C8;
+  --coffee-dark: #38271F;
+  --coffee-medium: #684832;
+  --warm-cream: #F5EBDD;
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #081426;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF6A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EAD4A8;
+}
+
+body {
+  color: #F5E9C8;
+  background-color: #0F2342;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Mobile Friendly Touch Targets */
+button, a {
+  touch-action: manipulation;
+}
+
+/* Smooth Luxury Borders & Glows */
+.border-gold-subtle {
+  border-color: rgba(212, 175, 106, 0.25);
+}
+
+.bg-glass-navy {
+  background: rgba(15, 35, 66, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bg-glass-card {
+  background: linear-gradient(135deg, rgba(22, 50, 91, 0.6) 0%, rgba(15, 35, 66, 0.85) 100%);
+  backdrop-filter: blur(8px);
+}
+
+/* Luxury Card Shimmer Effect */
+.shimmer-gold {
+  background: linear-gradient(90deg, rgba(212, 175, 106, 0) 0%, rgba(212, 175, 106, 0.15) 50%, rgba(212, 175, 106, 0) 100%);
+  background-size: 200% 100%;
+}
+
+/* Print Thermal Receipt Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-receipt, .printable-receipt * {
+    visibility: visible;
+  }
+  .printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0;
+    padding: 4mm;
+    color: #000;
+    background: #fff;
+    font-family: monospace;
+    font-size: 11px;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
